@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: log4j-kubearmor
+  labels:
+    app: log4j-kubearmor
+spec:
+  containers:
+  - name: log4j-kubearmor
+    image: nyrahul/log4j_kubearmor:latest
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 1337

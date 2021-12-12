@@ -1,0 +1,2 @@
+LOG4J_VER=2.5
+LOG4J_PATH=apache-log4j-${LOG4J_VER}-bin
