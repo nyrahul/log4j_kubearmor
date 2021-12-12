@@ -2,13 +2,12 @@ apiVersion: security.kubearmor.com/v1
 kind: KubeArmorPolicy
 metadata:
   name: do-not-allow-exec-from-java
-  namespace: multiubuntu
 spec:
   severity: 5
-  message: "block /bin/dash executing /bin/ls"
+  message: "disallowed execing from java process"
   selector:
     matchLabels:
-      group: group-1
+      app: log4j-kubearmor
   process:
     matchPaths:
     - path: /bin/touch
